@@ -1,0 +1,19 @@
+{
+  "name": "code_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikoVelascoRamirez/VisualPartnershipCodeChallenge.git"
+  },
+  "author": "Miko Velasco Ramírez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikoVelascoRamirez/VisualPartnershipCodeChallenge/issues"
+  },
+  "homepage": "https://github.com/MikoVelascoRamirez/VisualPartnershipCodeChallenge#readme"
+}
