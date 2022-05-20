@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/MikoVelascoRamirez/VisualPartnershipCodeChallenge/issues"
   },
-  "homepage": "https://github.com/MikoVelascoRamirez/VisualPartnershipCodeChallenge#readme"
+  "homepage": "https://github.com/MikoVelascoRamirez/VisualPartnershipCodeChallenge#readme",
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "jest": "^28.1.0",
+    "supertest": "^6.2.3"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
