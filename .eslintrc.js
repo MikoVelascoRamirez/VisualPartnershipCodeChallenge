@@ -18,7 +18,7 @@ module.exports = {
         "multiline-comment-style": ["error", "bare-block"],
         camelcase: "warn",
         eqeqeq: ["error", "always"],
-        "func-call-spacing": ["error", "always"],
+        "func-call-spacing": ["error", "never"],
         "one-var": ["error", "consecutive"],
         "no-cond-assign": ["error", "always"],
         "no-extra-parens": "error",
