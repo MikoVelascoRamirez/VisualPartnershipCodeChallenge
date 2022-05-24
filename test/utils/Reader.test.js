@@ -40,9 +40,21 @@ describe("Test's suite for Reader utility", () => {
             expect(explorer.haveCertification).not.toBeNull();
         }
     });
+
+    test("7. Testing if every value of each object has the correct type value.", () => {
+        const data = Reader.readSourceData("src/data/visualpartners.json");
+        for(let explorer of data){
+            expect(typeof explorer.id).toBe("string");
+            expect(typeof explorer.name).toBe("string");
+            expect(typeof explorer.email).toBe("string");
+            expect(typeof explorer.credits).toBe("number");
+            expect(explorer.enrollments instanceof Array).toBeTruthy();
+            expect(typeof explorer.previousCourses).toBe("number");
+            expect(typeof explorer.haveCertification).toBe("boolean");
+        }
+    });
 });
 
 /*  
-    TODO: Testing if every value of each object is not nullish
     TODO: Testing if every value of each object has the correct type value.
 */
