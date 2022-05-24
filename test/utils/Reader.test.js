@@ -20,13 +20,20 @@ describe("Test's suite for Reader utility", () => {
         const data = Reader.readSourceData("src/data/visualpartners.json");
         expect(data.length).toBeGreaterThan(0);
     });    
+
+    test("5. Testing if every object in the array has all properties", () => {
+        const data = Reader.readSourceData("src/data/visualpartners.json");
+        for(let explorer of data){
+            expect(Object.keys(explorer)).toEqual(expect.arrayContaining(["id", "name", "email", "credits", "enrollments", "previousCourses", "haveCertification"]));
+        }
+
+    });
 });
 
 /*  TODO: Testing if the route file exists
 //  TODO: Testing if the file in the route exists
 //  TODO: Testing if the file returns an array
 //  TODO: Testing if the file returns a not empty array
-//  TODO: Testing if each element of that array is an object
 //  TODO: Testing if every object in the array has all properties.
     TODO: Testing if every value of each object is not undefined
     TODO: Testing if every value of each object has the correct type value.
