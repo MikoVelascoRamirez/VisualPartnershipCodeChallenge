@@ -15,6 +15,11 @@ describe("Test's suite for Reader utility", () => {
         const data = Reader.readSourceData("src/data/visualpartners.json");
         expect(data.constructor === Array).toBeTruthy();
     });
+
+    test("4. Checking if file returns a not empty array", () => {
+        const data = Reader.readSourceData("src/data/visualpartners.json");
+        expect(data.length).toBeGreaterThan(0);
+    });    
 });
 
 /*  TODO: Testing if the route file exists
