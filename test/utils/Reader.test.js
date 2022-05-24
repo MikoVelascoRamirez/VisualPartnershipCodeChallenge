@@ -26,15 +26,23 @@ describe("Test's suite for Reader utility", () => {
         for(let explorer of data){
             expect(Object.keys(explorer)).toEqual(expect.arrayContaining(["id", "name", "email", "credits", "enrollments", "previousCourses", "haveCertification"]));
         }
+    });
 
+    test("6. Checking if every value of each object is not null", () => {
+        const data = Reader.readSourceData("src/data/visualpartners.json");
+        for(let explorer of data){
+            expect(explorer.id).not.toBeNull();
+            expect(explorer.name).not.toBeNull();
+            expect(explorer.email).not.toBeNull();
+            expect(explorer.credits).not.toBeNull();
+            expect(explorer.enrollments).not.toBeNull();
+            expect(explorer.previousCourses).not.toBeNull();
+            expect(explorer.haveCertification).not.toBeNull();
+        }
     });
 });
 
-/*  TODO: Testing if the route file exists
-//  TODO: Testing if the file in the route exists
-//  TODO: Testing if the file returns an array
-//  TODO: Testing if the file returns a not empty array
-//  TODO: Testing if every object in the array has all properties.
-    TODO: Testing if every value of each object is not undefined
+/*  
+    TODO: Testing if every value of each object is not nullish
     TODO: Testing if every value of each object has the correct type value.
 */
