@@ -11,7 +11,7 @@ module.exports = {
     },
     "ignorePatterns": [".eslintrc.js", "*package"],
     "rules": {
-        indent : ["error", 4],
+        indent : ["error", 4, {"ArrayExpression": 1}],
         "linebreak-style": ["error", "unix"],
         quotes: ["error", "double"],
         semi: ["error", "always"],
@@ -19,7 +19,7 @@ module.exports = {
         camelcase: "warn",
         eqeqeq: ["error", "always"],
         "func-call-spacing": ["error", "never"],
-        "one-var": ["error", "consecutive"],
+        //"one-var": ["error", "consecutive"],
         "no-cond-assign": ["error", "always"],
         "no-extra-parens": "error",
         "no-constant-condition": "error",
