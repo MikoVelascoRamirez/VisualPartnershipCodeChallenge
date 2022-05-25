@@ -54,7 +54,3 @@ describe("Test's suite for Reader utility", () => {
         }
     });
 });
-
-/*  
-    TODO: Testing if every value of each object has the correct type value.
-*/
