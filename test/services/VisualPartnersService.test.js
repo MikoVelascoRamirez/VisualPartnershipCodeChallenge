@@ -23,16 +23,22 @@ describe("Test's suite for VisualPartnerService's class", () => {
             {name: "Lola", id: 3, haveCertification: true}, 
             {name: "Sam", id: 4, haveCertification: false}
         ];
-        
+
         const visualPartnersWithCertification = VisualPartnersService.filterByCertification(data);
 
         expect(visualPartnersWithCertification).toStrictEqual([{name: "Pepe", id: 2, haveCertification: true}, {name: "Lola", id: 3, haveCertification: true}]);
     });
-});
+    
+    test("3) Test method visualPartnersWithCreditOver500() returns a list with partners with 500 or more credits.", () => {
+        const data = [
+            {name: "Pepe", id: 2, credits: 450}, 
+            {name: "Lola", id: 3, credits: 600}, 
+            {name: "Sam", id: 4, credits: 500},
+            {name: "Kayley", id: 5, credits: 200},
+        ];
 
-/*
-    TODO: Test if the method getVisualPartnersWithCertification() returns a list
-    visual partners which have haveCertification attribute
-    TODO: Test if the method visualPartnersWithCreditOver500() returns sa list
-    visual partners with 500 or more credits.
-*/
+        const visualPartnersWithMoreOf500Credits = VisualPartnersService.filterByCredits(data);
+
+        expect(visualPartnersWithMoreOf500Credits).toStrictEqual([{name: "Lola", id: 3, credits: 600}, {name: "Sam", id: 4, credits: 500}]);
+    });
+});
