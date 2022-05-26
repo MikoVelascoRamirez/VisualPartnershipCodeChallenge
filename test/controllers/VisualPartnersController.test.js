@@ -16,10 +16,26 @@ describe("Test's suite for VisualPartnerController", () => {
             {id: 3, name: "Fernando"}
         ]);
     });
+
+    test("2. Checking if filterByCertification() works", () => {
+        const data = [
+            {name: "Pepe", id: 2, haveCertification: true}, 
+            {name: "Lola", id: 3, haveCertification: true}, 
+            {name: "Sam", id: 4, haveCertification: false}
+        ];
+
+        const getViaualPartnersWithCertification = visualPartnersController.getPartnersWithCertifications(data);
+
+        expect(getViaualPartnersWithCertification).toStrictEqual(
+            [
+                {name: "Pepe", id: 2, haveCertification: true}, 
+                {name: "Lola", id: 3, haveCertification: true}
+            ]
+        );
+    });
 });
 
 /**
- * TODO: Checking if readSourceData() works
  * TODO: Checking if filterByCertification() works
  * TODO: Checking if filterByCredits() works
  */
