@@ -23,7 +23,3 @@ describe("Test's suite for VisualPartnerController", () => {
         expect(getVisualPartnersWith500OrMoreCredits.filterByCredits().length).toBe(27);
     });
 });
-
-/**
- * TODO: Checking if filterByCredits() works
- */
