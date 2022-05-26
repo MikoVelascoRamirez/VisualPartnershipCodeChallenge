@@ -3,53 +3,24 @@ const visualPartnersController = require("../../lib/controllers/VisualPartnersCo
 describe("Test's suite for VisualPartnerController", () => {
 
     test("1. Checking if readSourceData() works", () => {
-        const data = [
-            {id: 1, name: "Johnny"}, 
-            {id: 2, name: "Ezekiel"}, 
-            {id: 3, name: "Fernando"}
-        ];
+        
+        const srcData = require("../../lib/utils/Reader").readSourceData("src/data/visualpartners.json");
     
-        const getVisualPartners = visualPartnersController.getVisualPartners(data);
-        expect(getVisualPartners).toStrictEqual([
-            {id: 1, name: "Johnny"}, 
-            {id: 2, name: "Ezekiel"}, 
-            {id: 3, name: "Fernando"}
-        ]);
+        const getVisualPartners = new visualPartnersController();
+        expect(getVisualPartners.getVisualPartners()).toStrictEqual(srcData);
     });
 
     test("2. Checking if filterByCertification() works", () => {
-        const data = [
-            {name: "Pepe", id: 2, haveCertification: true}, 
-            {name: "Lola", id: 3, haveCertification: true}, 
-            {name: "Sam", id: 4, haveCertification: false}
-        ];
+        const getViaualPartnersWithCertification = new visualPartnersController();
 
-        const getViaualPartnersWithCertification = visualPartnersController.getPartnersWithCertifications(data);
-
-        expect(getViaualPartnersWithCertification).toStrictEqual(
-            [
-                {name: "Pepe", id: 2, haveCertification: true}, 
-                {name: "Lola", id: 3, haveCertification: true}
-            ]
-        );
+        expect(getViaualPartnersWithCertification.getPartnersWithCertifications().length).toBe(29);
     });
 
     test("3. Checking if filterByCredits() works", () => {
-        const data = [
-            {name: "Pepe Le Puig", id: 2, credits: 450}, 
-            {name: "Lola Bunny", id: 3, credits: 600}, 
-            {name: "Sam Bigotes", id: 4, credits: 500},
-            {name: "Kayley Cuocco", id: 5, credits: 200},
-        ];
 
-        const getVisualPartnersWith500OrMoreCredits = visualPartnersController.filterByCredits(data);
+        const getVisualPartnersWith500OrMoreCredits = new visualPartnersController();
 
-        expect(getVisualPartnersWith500OrMoreCredits).toStrictEqual(
-            [
-                {name: "Lola Bunny", id: 3, credits: 600}, 
-                {name: "Sam Bigotes", id: 4, credits: 500}
-            ]
-        );
+        expect(getVisualPartnersWith500OrMoreCredits.filterByCredits().length).toBe(27);
     });
 });
 
