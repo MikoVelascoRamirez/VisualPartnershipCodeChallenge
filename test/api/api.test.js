@@ -11,6 +11,13 @@ describe("Suite's tests for visual partners api", () => {
         const response = await request(app).get("/v1/students");
         expect(response._body.constructor === Object).toBeTruthy();
     });
+
+    test("Test if GET /v1/students returns a list of visual partners", async () => {
+        const response = await request(app).get("/v1/students");
+        const Reader = require("../../lib/utils/Reader");
+        const data = Reader.readSourceData("src/data/visualpartners.json");
+        expect(response._body.data).toStrictEqual(data);
+    });
 });
 
 
