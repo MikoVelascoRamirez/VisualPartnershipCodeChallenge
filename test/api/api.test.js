@@ -6,11 +6,15 @@ describe("Suite's tests for visual partners api", () => {
         const response = await request(app).get("/v1/students");
         expect(response.statusCode).toEqual(200);
     });
+
+    test("Test if GET /v1/students responses with an object", async () => {
+        const response = await request(app).get("/v1/students");
+        expect(response._body.constructor === Object).toBeTruthy();
+    });
 });
 
+
 /**
- * TODO: Test if endpoint http://localhost:3000/v1/students returns a 200 status code
- * TODO: Test if endpoint http://localhost:3000/v1/students responses an object like {response: visualpartners, data: list of visualpartners}
  * TODO: Test if endpoint http://localhost:3000/v1/students returns a list of all visual partners on data
  * 
  * TODO: Test if endpoint http://localhost:3000/v1/emails returns a 200 status code
