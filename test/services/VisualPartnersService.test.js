@@ -25,7 +25,6 @@ describe("Test's suite for VisualPartnerService's class", () => {
         ];
 
         const visualPartnersWithCertification = VisualPartnersService.filterByCertification(data);
-
         expect(visualPartnersWithCertification).toEqual(expect.arrayContaining([
             "correodepepe@gmail.com",
             "correodelola@gmail.com"
