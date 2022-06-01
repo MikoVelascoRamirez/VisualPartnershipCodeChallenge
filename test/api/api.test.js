@@ -40,11 +40,15 @@ describe("Suite's tests for visual partners api", () => {
         const response = await request(app).get("/v1/credits");
         expect(response.statusCode).toEqual(200);
     });
+
+    test("Test if GET /v1/credits responses with an object", async () => {
+        const response = await request(app).get("/v1/credits");
+        expect(response._body.constructor === Object).toBeTruthy();
+    });
 });
 
 
 /**
- * TODO: Test if endpoint http://localhost:3000/v1/credits returns a 200 status code
  * TODO: Test if endpoint http://localhost:3000/v1/credits responses an object like {response: credits, data: list of visualpartners with 500 or more credits}
  * TODO: Test if endpoint http://localhost:3000/v1/credits returns a list of visual partners with 500 or more credits on data
  */
