@@ -45,10 +45,16 @@ describe("Suite's tests for visual partners api", () => {
         const response = await request(app).get("/v1/credits");
         expect(response._body.constructor === Object).toBeTruthy();
     });
+
+    test("Test if GET /v1/credits returns a list of visual partners with 500 or more credits", async () => {
+        const response = await request(app).get("/v1/credits");
+        const Reader = require("../../lib/utils/Reader");
+        const data = Reader.readSourceData("test/data/visualPartnersCredits.json");
+        expect(response._body.data).toStrictEqual(data);
+    });
 });
 
 
 /**
- * TODO: Test if endpoint http://localhost:3000/v1/credits responses an object like {response: credits, data: list of visualpartners with 500 or more credits}
  * TODO: Test if endpoint http://localhost:3000/v1/credits returns a list of visual partners with 500 or more credits on data
  */
