@@ -28,12 +28,17 @@ describe("Suite's tests for visual partners api", () => {
         const response = await request(app).get("/v1/emails");
         expect(response._body.constructor === Object).toBeTruthy();
     });
+
+    test("Test if GET /v1/emails returns a list with emails of visual partners with certification on data", async () => {
+        const response = await request(app).get("/v1/emails");
+        const Reader = require("../../lib/utils/Reader");
+        const data = Reader.readSourceData("test/data/visualPartnersCertificated.json");
+        expect(response._body.data).toStrictEqual(data);
+    });
 });
 
 
 /**
- * 
- * TODO: Test if endpoint http://localhost:3000/v1/emails responses an object like {response: emailsWithCertification, data: list of certificated}
  * TODO: Test if endpoint http://localhost:3000/v1/emails returns a list with emails of visual partners with certification on data
  * 
  * TODO: Test if endpoint http://localhost:3000/v1/credits returns a 200 status code
