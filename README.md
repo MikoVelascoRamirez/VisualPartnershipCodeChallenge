@@ -74,3 +74,26 @@ Taking a look at the last flowchart, this was designed on a Model-View-Controlle
       - **Services/VisualPartnerService**: it works like an extension of controller, providing only the logic functions that will manipulate the information stored on the model.
       - **controller/VisualPartnersController** it will manage the requests from the client and the responses of data manipulation that will be return to the API.
    3. **API**: it will host the server functionalities and the API with the parsed data.
+
+### Getting Started
+These instructions will get you a copy of the project up and running on your local machine for running and testing purposes.
+
+#### Pre-requisites
+- A code text editor where you can clone this repository. (VS Code, Vim, Atom, Brackets, etc.)
+- CLI Command (preferly if you have a distro Linux, no matter if you're using PowerShell)
+- Node.js installed (preferly the latest version) to run the project.
+- NPM to download and install dependencies.
+
+#### Installation
+To install this project, just follow the instructions below.
+1. Clone the project (if you are on VS Code, just press ```Ctrl + Alt + P```) and paste the repo link.
+2. Install dependencies
+3. Run the project
+  
+```
+git clone https://github.com/MikoVelascoRamirez/VisualPartnershipCodeChallenge
+
+npm install
+
+npm start
+```
