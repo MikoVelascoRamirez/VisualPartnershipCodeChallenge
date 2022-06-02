@@ -97,3 +97,10 @@ npm install
 
 npm start
 ```
+
+#### Technologies
+This project was build with:
+- [Express 4.18.1](https://expressjs.com/) - A minimalist web framework for Node.js to create backend apps.
+- [Jest 26.0.0](https://jestjs.io/) - A JavaScript test framework to unit tests.
+- [Supertest 6.2.3](https://www.npmjs.com/package/supertest) - A npm module to test HTTP requests.
+- [ESLint 8.15.0](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
