@@ -8,7 +8,7 @@
 2. [Getting started](#getting-started)
    - Pre-requisites
    - Installation
-3. [Technolgies](#technolgies)
+3. [Technologies](#technologies)
 4. [Test Executing](#test-executing)
    - Automated tests
    - Unit tests
