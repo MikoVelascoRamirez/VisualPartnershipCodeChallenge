@@ -104,3 +104,38 @@ This project was build with:
 - [Jest 26.0.0](https://jestjs.io/) - A JavaScript test framework to unit tests.
 - [Supertest 6.2.3](https://www.npmjs.com/package/supertest) - A npm module to test HTTP requests.
 - [ESLint 8.15.0](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
+
+### Test executing
+To run the following tests, please execute the comand ```npm test javascriptfile.js``` in the path correct, to acceed to the test path, just type in the command line ```cd test/thefolderyouneed``` to run the unit tests.
+
+#### Automated tests
+To run these tests, please make a push to the remote repository and go to the [**Actions section**](https://github.com/MikoVelascoRamirez/VisualPartnershipCodeChallenge/actions) to see the workflow execution.
+
+#### Unit Tests
+1. Suite tests of api (```test/api```)
+   - **Testing endpoint GET /v1/students: status code**: run a unit test to ensure that the response returns a 200 status code.
+   - **Test endpoint GET /v1/students: object type returned**: to ensure taht the endpoint will give us a JSON format object contained in response object.
+   - **Test endpoint GET /v1/students: response generated**: ensuring if the endpoint returns a correct object which must be an array of students.
+   - **Test endpoint GET /v1/emails: status code**: test the same as the first point.
+   - **Test endpoint GET /v1/emails: object type returned**: test the same as the second ṕoint.
+   - **Test endpoint GET /v1/emails: response generated**: ensure if the endpoint responses with an array of emails of students certificated.
+   - **Test endpoint GET /v1/credits: status code**: test the same as the first point.
+   - **Test endpoint GET /v1/credits: object type returned**: test the same as the second point.
+   - **Test endpoint GET /v1/credits: response generated**: ensuring if the endpoint responses an array of visual partners with 500 or more credits.
+
+2. Suite tests of controller (```test/controllers```)
+   - **Test 1: source data**: test to ensure if the service provided to the controller returns a list of students.
+   - **Test 2: filtering by certification**: to test if the service returns a list of students who are certificated.
+   - **Test 3: filtering by credits**: ensure if the service returns a list with students with 500 or more credits.
+
+3. Suite tests of service (```test/services```)
+   This suite runs the same unit tests contained in the controller's. The difference between these is the definition of each one, where the tests in the service defines explicitly the way of repsond to the petitions in the API. Meanwhile, in the controller's only implements the services.
+
+4. Suite tests of utils (```test/utils```)
+   - **Reading file**: unit test which reads a path to check if .
+   - **Verifying route**: unit test to check if the source of the data exists.
+   - **Verifiyng file's content**: test if the file returns a list type object.
+   - **Verifiying the availability**: we prove if the returned list contains data of students and doesn´t be empty.
+   - **Checking data integrity #1**: test if each item of the list which is an object has all properties.
+   - **Checking data integrity #2**: test if every value of each item is not null.  
+   - **Checking data integrity #3**: test if every value of each item has the correct data type.
