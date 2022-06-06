@@ -186,3 +186,6 @@ and we'll recieve the following JSON:
 ![credits_response](assets/img/credits_response_endpoint.png)
 
 In the previous image, we see the list like a value in the entry *data*, with its respective petition, indicated on *request*.
+
+### Authors
+- [Miko Velasco Ramírez](https://github.com/MikoVelascoRamirez) - *Author of this repository and initial work*
