@@ -1,6 +1,6 @@
 # Visual Partner-ship - Code challenge
 
-## Table of Contents
+## Table of Contents 📝
 1. [General Info](#general-info)   
    - Description
    - Requirements
@@ -19,7 +19,7 @@
 6. [Authors](#authors)
 7. [Acknowledgements](#acknowledgements)
 
-### General Info
+### General Info ℹ️
 ***
 
 #### Description
@@ -75,7 +75,7 @@ Taking a look at the last flowchart, this was designed on a Model-View-Controlle
       - **controller/VisualPartnersController** it will manage the requests from the client and the responses of data manipulation that will be return to the API.
    3. **API**: it will host the server functionalities and the API with the parsed data.
 
-### Getting Started
+### Getting Started 🚀
 These instructions will get you a copy of the project up and running on your local machine for running and testing purposes.
 
 #### Pre-requisites
@@ -84,7 +84,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Node.js installed (preferly the latest version) to run the project.
 - NPM to download and install dependencies.
 
-#### Installation
+#### Installation 
 To install this project, just follow the instructions below.
 1. Clone the project (if you are on VS Code, just press ```Ctrl + Alt + P```) and paste the repo link.
 2. Install dependencies
@@ -105,7 +105,7 @@ This project was build with:
 - [Supertest 6.2.3](https://www.npmjs.com/package/supertest) - A npm module to test HTTP requests.
 - [ESLint 8.15.0](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
 
-### Test executing
+### Test executing 🔧
 To run the unit tests, please execute the comand ```npm test javascriptfile.js``` in the path correct, to acceed to the test path, just type in the command line ```cd test/thefolderyouneed``` to run the unit tests.
 
 #### Automated tests 
@@ -140,7 +140,7 @@ To run these tests, please make a push to the remote repository and go to the [*
    - **Checking data integrity #2**: test if every value of each item is not null.  
    - **Checking data integrity #3**: test if every value of each item has the correct data type.
 
-### Functionality
+### Functionality ⚙️
 In this section, we're going to explain how you can use this app and what type of response is returned of every request.   
 > *NOTE: Please check the section [Installation](#installation) to know how to execute this API.*
 
@@ -187,10 +187,10 @@ and we'll recieve the following JSON:
 
 In the previous image, we see the list like a value in the entry *data*, with its respective petition, indicated on *request*.
 
-### Authors
+### Authors ✍️
 - [Miko Velasco Ramírez](https://github.com/MikoVelascoRamirez) - *Author of this repository and initial work*
 
-### Acknowledgements
+### Acknowledgements 🤗
 - Thanks to [Carlo Gilmar](https://github.com/carlogilmar) for his teaching, experience and knowledge.
 - Grateful to have the skills to make this possible. Always I'm looking how to improve.
 - Can we have a coffee or eat a taco?
