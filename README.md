@@ -139,3 +139,4 @@ To run these tests, please make a push to the remote repository and go to the [*
    - **Checking data integrity #1**: test if each item of the list which is an object has all properties.
    - **Checking data integrity #2**: test if every value of each item is not null.  
    - **Checking data integrity #3**: test if every value of each item has the correct data type.
+  
