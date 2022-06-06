@@ -189,3 +189,10 @@ In the previous image, we see the list like a value in the entry *data*, with it
 
 ### Authors
 - [Miko Velasco Ramírez](https://github.com/MikoVelascoRamirez) - *Author of this repository and initial work*
+
+### Acknowledgements
+- Thanks to [Carlo Gilmar](https://github.com/carlogilmar) for his teaching, experience and knowledge.
+- Grateful to have the skills to make this possible. Always I'm looking how to improve.
+- Can we have a coffee or eat a taco?
+
+Made with ❤️ by [Miko Velasco Ramírez](https://github.com/MikoVelascoRamirez) 😊
