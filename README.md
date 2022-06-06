@@ -139,3 +139,50 @@ To run these tests, please make a push to the remote repository and go to the [*
    - **Checking data integrity #1**: test if each item of the list which is an object has all properties.
    - **Checking data integrity #2**: test if every value of each item is not null.  
    - **Checking data integrity #3**: test if every value of each item has the correct data type.
+
+### Functionality
+In this section, we're going to explain how you can use this app and what type of response is returned of every request.   
+> *NOTE: Please check the section [Installation](#installation) to know how to execute this API.*
+
+#### **GET endpoint**: Getting list of students
+
+In this endpoint, we want to get a full list of students in the response, to ensure the data integrity, please open your browser and type the following url in the address bar.
+
+![students_url](assets/img/students_endpoint_url.png)
+
+After typing the url, you can see that the structure of every response should look like this:
+
+![structureData_response](assets/img/response_structure.png)
+
+We see a JSON response, which has two simple entries, the first with the name of *response* that indicates the endpoint required, and another one with the name of *data*, where the students information is stored.
+
+![students_response](assets/img/students_response_endpoint.png)
+
+If we display the shrinked data, we can see that every item on the list in field of data has a set of properties like *id*, *name*, *email*, *credits*, *enrollments*, *previousCourses* and a *haveCertification* boolean value, indicating if the student has a certification.
+
+#### **GET endpoint**: Getting email's students which are certificated
+
+In this endpoint, we get a list of students which are certificated. 
+Typing the following url in the address bar:
+
+![emails_students_url](assets/img/emails_endpoint_url.png.png)
+
+we'll receive this:
+
+![emails_response](assets/img/emails_response_endpoint.png)
+
+We see a JSON response, which is a simple array that contains only the email's students.
+
+#### **GET endpoint**: Getting students with credits higher of 500.
+
+This endpoint returns a list of students which has 500 or more credits in his information.
+
+Please type the url:
+
+![credits_students_url](assets/img/credits_endpoint_url.png.png)
+
+and we'll recieve the following JSON:
+
+![credits_response](assets/img/credits_response_endpoint.png)
+
+In the previous image, we see the list like a value in the entry *data*, with its respective petition, indicated on *request*.
