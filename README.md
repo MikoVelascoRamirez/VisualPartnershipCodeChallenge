@@ -8,7 +8,7 @@
 2. [Getting started](#getting-started)
    - Pre-requisites
    - Installation
-3. [Technolgies](#technolgies)
+3. [Technologies](#technologies)
 4. [Test Executing](#test-executing)
    - Automated tests
    - Unit tests
@@ -106,9 +106,9 @@ This project was build with:
 - [ESLint 8.15.0](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
 
 ### Test executing
-To run the following tests, please execute the comand ```npm test javascriptfile.js``` in the path correct, to acceed to the test path, just type in the command line ```cd test/thefolderyouneed``` to run the unit tests.
+To run the unit tests, please execute the comand ```npm test javascriptfile.js``` in the path correct, to acceed to the test path, just type in the command line ```cd test/thefolderyouneed``` to run the unit tests.
 
-#### Automated tests
+#### Automated tests 
 To run these tests, please make a push to the remote repository and go to the [**Actions section**](https://github.com/MikoVelascoRamirez/VisualPartnershipCodeChallenge/actions) to see the workflow execution.
 
 #### Unit Tests
@@ -139,4 +139,3 @@ To run these tests, please make a push to the remote repository and go to the [*
    - **Checking data integrity #1**: test if each item of the list which is an object has all properties.
    - **Checking data integrity #2**: test if every value of each item is not null.  
    - **Checking data integrity #3**: test if every value of each item has the correct data type.
-  
